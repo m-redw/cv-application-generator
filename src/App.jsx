@@ -27,6 +27,18 @@ function App() {
         <Button text="+" callback={testCallback} bType="button" />
         <Button text="Submit" callback={testCallback} bType="submit" />
       </section>
+      <section>
+        <h2>Practical Experience</h2>
+        <Input label="Company Name" inputName="companyName" />
+        <Input label="Postion Title" inputName="positionTitle" />
+        <Input label="Main Responsibilities" inputName="jobResponsibilities" />
+        <Input
+          label="Date from and until you worked for that company"
+          inputName="jobDate"
+        />
+        <Button text="+" callback={testCallback} bType="button" />
+        <Button text="Submit" callback={testCallback} bType="submit" />
+      </section>
     </>
   );
 }
