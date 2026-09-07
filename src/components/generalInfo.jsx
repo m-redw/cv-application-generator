@@ -3,13 +3,13 @@ import { Input } from "./input.jsx";
 import { Button } from "./button.jsx";
 
 export function GeneralInfo() {
+  const [gIndex, setGIndex] = useState(0);
+  const [gInfo, setGInfo] = useState({ name: "", phone: "", email: "" });
+
   function submit(event) {
     event.preventDefault();
     setGIndex(gIndex === 0 ? 1 : 0);
   }
-
-  const [gIndex, setGIndex] = useState(0);
-  const [gInfo, setGInfo] = useState({ name: "", phone: "", email: "" });
 
   if (gIndex === 0) {
     return (
