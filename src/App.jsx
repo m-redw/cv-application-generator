@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Input } from "./components/input.jsx";
 import { Button } from "./components/button.jsx";
 import { GeneralInfo } from "./components/generalInfo.jsx";
+import { Education } from "./components/education.jsx";
 
 function App() {
   const testCallback = (event) => {
@@ -15,14 +16,7 @@ function App() {
         <GeneralInfo />
       </section>
       <section>
-        <h2>Education</h2>
-        <form>
-          <Input label="School Name" inputName="schoolName" />
-          <Input label="Title of Study" inputName="studyTitle" />
-          <Input label="Date of Study" inputName="studyDate" />
-          <Button text="+" callback={testCallback} bType="button" />
-          <Button text="Submit" callback={testCallback} bType="submit" />
-        </form>
+        <Education />
       </section>
       <section>
         <h2>Practical Experience</h2>
