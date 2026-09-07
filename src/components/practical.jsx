@@ -5,7 +5,13 @@ import { Button } from "./button.jsx";
 export function Practical() {
   const [practIndex, setPractIndex] = useState(0);
   const [practInfos, setPractInfos] = useState([
-    { name: "", position: "", responsibilities: "", date: "" },
+    {
+      name: "",
+      position: "",
+      responsibilities: "",
+      date: "",
+      id: crypto.randomUUID(),
+    },
   ]);
 
   function submit(event) {
@@ -28,7 +34,13 @@ export function Practical() {
   function addPract() {
     setPractInfos([
       ...practInfos,
-      { name: "", position: "", responsibilities: "", date: "" },
+      {
+        name: "",
+        position: "",
+        responsibilities: "",
+        date: "",
+        id: crypto.randomUUID(),
+      },
     ]);
   }
 
@@ -42,7 +54,7 @@ export function Practical() {
       <>
         <h2>Practical Experience</h2>
         {practInfos.map((pract, i) => (
-          <form key={pract.name + pract.date}>
+          <form key={pract.id}>
             <Input
               label="Company Name"
               inputName="companyName"
@@ -92,7 +104,7 @@ export function Practical() {
       <h2>Practical Experience</h2>
       {practInfos.map((pract) => {
         return (
-          <Fragment key={pract.name + pract.date}>
+          <Fragment key={pract.id}>
             <h3>
               {pract.name} <p>{pract.date}</p>
             </h3>

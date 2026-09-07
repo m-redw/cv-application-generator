@@ -4,7 +4,9 @@ import { Button } from "./button.jsx";
 
 export function Education() {
   const [eduIndex, setEduIndex] = useState(0);
-  const [eduInfos, setEduInfos] = useState([{ name: "", study: "", date: "" }]);
+  const [eduInfos, setEduInfos] = useState([
+    { name: "", study: "", date: "", id: crypto.randomUUID() },
+  ]);
 
   function submit(event) {
     event.preventDefault();
@@ -24,11 +26,14 @@ export function Education() {
   }
 
   function addEdu() {
-    setEduInfos([...eduInfos, { name: "", study: "", date: "" }]);
+    setEduInfos([
+      ...eduInfos,
+      { name: "", study: "", date: "", id: crypto.randomUUID() },
+    ]);
   }
 
-  function removeEdu(info) {
-    const edittedInfos = eduInfos.filter((i) => !Object.is(i, info));
+  function removeEdu(edu) {
+    const edittedInfos = eduInfos.filter((i) => i.id !== edu.id);
     setEduInfos(edittedInfos);
   }
 
@@ -37,7 +42,7 @@ export function Education() {
       <>
         <h2>Education</h2>
         {eduInfos.map((edu, i) => (
-          <form key={edu.name + edu.study}>
+          <form key={edu.id}>
             <Input
               label="School Name"
               inputName="schoolName"
@@ -75,7 +80,7 @@ export function Education() {
       <h2>Education</h2>
       {eduInfos.map((edu) => {
         return (
-          <Fragment key={edu.name + edu.study}>
+          <Fragment key={edu.id}>
             <h3>{edu.name}</h3>
             <p>{edu.study}</p>
             <p>{edu.date}</p>
