@@ -10,10 +10,15 @@ function App() {
   return (
     <>
       <h1>CV Generator</h1>
-      <form>
-        <Input label="Name" inputName="name" />
-        <Button text="Submit" callback={testCallback} bType="submit" />
-      </form>
+      <section>
+        <h2>General Info</h2>
+        <form>
+          <Input label="Name" inputName="name" />
+          <Input label="Email" inputName="email" type="email" />
+          <Input label="Phone" inputName="phone" type="tel" />
+          <Button text="Submit" callback={testCallback} bType="submit" />
+        </form>
+      </section>
     </>
   );
 }
