@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import { Input } from "./input.jsx";
 import { Button } from "./button.jsx";
 
@@ -36,12 +36,12 @@ export function Education() {
     return (
       <>
         <h2>Education</h2>
-        {eduInfos.map((info, i) => (
-          <form>
+        {eduInfos.map((edu, i) => (
+          <form key={edu.name + edu.study}>
             <Input
               label="School Name"
               inputName="schoolName"
-              inputValue={info.name}
+              inputValue={edu.name}
               changeCallback={(event) => {
                 handleInfos(i, "name", event.target.value);
               }}
@@ -49,7 +49,7 @@ export function Education() {
             <Input
               label="Title of Study"
               inputName="studyTitle"
-              inputValue={info.study}
+              inputValue={edu.study}
               changeCallback={(event) => {
                 handleInfos(i, "study", event.target.value);
               }}
@@ -57,12 +57,12 @@ export function Education() {
             <Input
               label="Date of Study"
               inputName="studyDate"
-              inputValue={info.date}
+              inputValue={edu.date}
               changeCallback={(event) => {
                 handleInfos(i, "date", event.target.value);
               }}
             />
-            <Button text="-" callback={() => removeEdu(info)} bType="button" />
+            <Button text="-" callback={() => removeEdu(edu)} bType="button" />
           </form>
         ))}
         <Button text="+" callback={addEdu} bType="button" />
@@ -75,11 +75,11 @@ export function Education() {
       <h2>Education</h2>
       {eduInfos.map((edu) => {
         return (
-          <>
+          <Fragment key={edu.name + edu.study}>
             <h3>{edu.name}</h3>
             <p>{edu.study}</p>
             <p>{edu.date}</p>
-          </>
+          </Fragment>
         );
       })}
       <Button text="Edit" callback={submit} bType="submit" />
