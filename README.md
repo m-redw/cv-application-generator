@@ -12,8 +12,11 @@ This project folllowed a similar workflow to my recent [Homepage](https://github
 
 1. Make the Trello
 2. Work on basics (HTML)
-3. Add functionality
+3. Add functionality (I used React for this project instead of JS)
 4. Style
-   It worked fine for this project, but I should also give credit to some drawings/mockups I made of the final design/funcions for making this process easier.
+
+It worked fine for this project, but I should also give credit to some drawings/mockups I made of the final design/funcions for making this process easier.
+
+This was my first React project, too. Overall, React has its benefits, but also its downsides. There were a few moments while I was making this where I though to myself, "This would be so much easier in js", but oh well. I'm still new to React, so that's probably why I don't REALLY like it just yet.
 
 Used the Vite React template.
