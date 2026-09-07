@@ -1,5 +1,5 @@
 import { Fragment, useState } from "react";
-import { Input } from "./input.jsx";
+import { Input, TextArea } from "./input.jsx";
 import { Button } from "./button.jsx";
 
 export function Practical() {
@@ -71,10 +71,10 @@ export function Practical() {
                 handleInfos(i, "position", event.target.value);
               }}
             />
-            <Input
+            <TextArea
               label="Main Responsibilities"
-              inputName="companyResponsibilities"
-              inputValue={pract.responsibilities}
+              textName="companyResponsibilities"
+              textValue={pract.responsibilities}
               changeCallback={(event) => {
                 handleInfos(i, "responsibilities", event.target.value);
               }}
@@ -88,14 +88,20 @@ export function Practical() {
               }}
             />
             <Button
+              className="remove"
               text="-"
               callback={() => removePract(pract)}
               bType="button"
             />
           </form>
         ))}
-        <Button text="+" callback={addPract} bType="button" />
-        <Button text="Submit" callback={submit} bType="submit" />
+        <Button className="add" text="+" callback={addPract} bType="button" />
+        <Button
+          className="submit"
+          text="Submit"
+          callback={submit}
+          bType="submit"
+        />
       </>
     );
   }
@@ -106,14 +112,14 @@ export function Practical() {
         return (
           <Fragment key={pract.id}>
             <h3>
-              {pract.name} <p>{pract.date}</p>
+              {pract.name} <span className="company-date">{pract.date}</span>
             </h3>
             <p>{pract.position}</p>
             <p>{pract.responsibilities}</p>
           </Fragment>
         );
       })}
-      <Button text="Edit" callback={submit} bType="submit" />
+      <Button className="edit" text="Edit" callback={submit} bType="submit" />
     </>
   );
 }

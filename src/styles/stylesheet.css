@@ -1,0 +1,132 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.paper {
+  padding: 20px;
+  border: 1px solid #727272;
+  box-shadow: 1px 1px 3px;
+  max-width: 500px;
+  min-height: 700px;
+}
+
+label,
+input,
+textarea {
+  display: block;
+  width: 100%;
+}
+
+input,
+textarea {
+  margin: 0 0 15px;
+  appearance: none;
+  border: 2px solid #7c7c7c;
+  border-radius: 5px;
+  padding: 2px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 30px;
+}
+
+form {
+  position: relative;
+  margin: 0 0 20px;
+}
+
+.remove {
+  background-color: #ff8080;
+  border: 2px solid red;
+  border-radius: 10px;
+
+  color: #630000;
+  font-size: 12px;
+
+  padding: 0;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 20px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.remove:hover {
+  background-color: #ff3333;
+  transform: scale(1.1);
+}
+
+.add:hover,
+.submit:hover,
+.edit:hover,
+.remove:hover {
+  background-color: #a3a3a3;
+  transform: scale(1.1);
+}
+
+.add,
+.submit,
+.edit {
+  background-color: #ffffff;
+  border: 2px solid #7c7c7c;
+  border-radius: 10px;
+  font-size: 16px;
+  padding: 0;
+}
+
+.add {
+  width: 32px;
+  margin: 0 10px 0 0;
+}
+
+.submit {
+  width: 80px;
+}
+
+section {
+  position: relative;
+  margin: 0 0 50px;
+}
+
+.edit {
+  width: 40px;
+  font-size: 12px;
+  position: absolute;
+  top: 30px;
+  right: -70px;
+}
+
+h2 {
+  width: 100%;
+  border-top: 2px solid black;
+  margin: 0;
+  padding: 20px 0 0;
+}
+
+.gen-info {
+  border: none;
+}
+
+.company-date {
+  font-weight: 400;
+  font-size: 12px;
+}
+
+h3 {
+  margin: 25px 0 0;
+}
+
+p {
+  margin: 0;
+}

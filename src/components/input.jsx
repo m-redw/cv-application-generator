@@ -17,3 +17,16 @@ export function Input({
     </label>
   );
 }
+
+export function TextArea({ label, textName, textValue, changeCallback }) {
+  return (
+    <label>
+      {label}
+      <textarea
+        name={textName}
+        value={textValue}
+        onChange={changeCallback}
+      ></textarea>
+    </label>
+  );
+}

@@ -67,11 +67,21 @@ export function Education() {
                 handleInfos(i, "date", event.target.value);
               }}
             />
-            <Button text="-" callback={() => removeEdu(edu)} bType="button" />
+            <Button
+              className="remove"
+              text="-"
+              callback={() => removeEdu(edu)}
+              bType="button"
+            />
           </form>
         ))}
-        <Button text="+" callback={addEdu} bType="button" />
-        <Button text="Submit" callback={submit} bType="submit" />
+        <Button className="add" text="+" callback={addEdu} bType="button" />
+        <Button
+          className="submit"
+          text="Submit"
+          callback={submit}
+          bType="submit"
+        />
       </>
     );
   }
@@ -87,7 +97,7 @@ export function Education() {
           </Fragment>
         );
       })}
-      <Button text="Edit" callback={submit} bType="submit" />
+      <Button className="edit" text="Edit" callback={submit} bType="submit" />
     </>
   );
 }

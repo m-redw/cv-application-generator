@@ -14,7 +14,7 @@ export function GeneralInfo() {
   if (gIndex === 0) {
     return (
       <>
-        <h2>General Info</h2>
+        <h2 className="gen-info">General Info</h2>
         <form>
           <Input
             label="Name"
@@ -41,7 +41,12 @@ export function GeneralInfo() {
               setGInfo({ ...gInfo, phone: event.target.value })
             }
           />
-          <Button text="Submit" callback={submit} bType="submit" />
+          <Button
+            className="submit"
+            text="Submit"
+            callback={submit}
+            bType="submit"
+          />
         </form>
       </>
     );
@@ -50,9 +55,10 @@ export function GeneralInfo() {
   return (
     <>
       <h1>{gInfo.name}</h1>
-      <p>Email: {gInfo.email}</p>
-      <p>Phone: {gInfo.phone}</p>
-      <Button text="Edit" callback={submit} bType="submit" />
+      <p>
+        Email: {gInfo.email} | Phone: {gInfo.phone}
+      </p>
+      <Button className="edit" text="Edit" callback={submit} bType="submit" />
     </>
   );
 }
