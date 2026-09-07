@@ -19,6 +19,14 @@ function App() {
           <Button text="Submit" callback={testCallback} bType="submit" />
         </form>
       </section>
+      <section>
+        <h2>Education</h2>
+        <Input label="School Name" inputName="schoolName" />
+        <Input label="Title of Study" inputName="studyTitle" />
+        <Input label="Date of Study" inputName="studyDate" />
+        <Button text="+" callback={testCallback} bType="button" />
+        <Button text="Submit" callback={testCallback} bType="submit" />
+      </section>
     </>
   );
 }
