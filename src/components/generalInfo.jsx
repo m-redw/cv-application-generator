@@ -1,0 +1,58 @@
+import { useState } from "react";
+import { Input } from "./input.jsx";
+import { Button } from "./button.jsx";
+
+export function GeneralInfo() {
+  function submit(event) {
+    event.preventDefault();
+    setGIndex(gIndex === 0 ? 1 : 0);
+  }
+
+  const [gIndex, setGIndex] = useState(0);
+  const [gInfo, setGInfo] = useState({ name: "", phone: "", email: "" });
+
+  if (gIndex === 0) {
+    return (
+      <>
+        <h2>General Info</h2>
+        <form>
+          <Input
+            label="Name"
+            inputName="name"
+            inputValue={gInfo.name}
+            changeCallback={(event) =>
+              setGInfo({ ...gInfo, name: event.target.value })
+            }
+          />
+          <Input
+            label="Email"
+            inputName="email"
+            inputValue={gInfo.email}
+            changeCallback={(event) =>
+              setGInfo({ ...gInfo, email: event.target.value })
+            }
+          />
+          <Input
+            label="Phone"
+            inputName="phone"
+            type="tel"
+            inputValue={gInfo.phone}
+            changeCallback={(event) =>
+              setGInfo({ ...gInfo, phone: event.target.value })
+            }
+          />
+          <Button text="Submit" callback={submit} bType="submit" />
+        </form>
+      </>
+    );
+  }
+
+  return (
+    <>
+      <h1>{gInfo.name}</h1>
+      <p>Email: {gInfo.email}</p>
+      <p>Phone: {gInfo.phone}</p>
+      <Button text="Edit" callback={submit} bType="submit" />
+    </>
+  );
+}

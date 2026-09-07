@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Input } from "./components/input.jsx";
 import { Button } from "./components/button.jsx";
+import { GeneralInfo } from "./components/generalInfo.jsx";
 
 function App() {
   const testCallback = (event) => {
@@ -11,13 +12,7 @@ function App() {
     <>
       <h1>CV Generator</h1>
       <section>
-        <h2>General Info</h2>
-        <form>
-          <Input label="Name" inputName="name" />
-          <Input label="Email" inputName="email" type="email" />
-          <Input label="Phone" inputName="phone" type="tel" />
-          <Button text="Submit" callback={testCallback} bType="submit" />
-        </form>
+        <GeneralInfo />
       </section>
       <section>
         <h2>Education</h2>
