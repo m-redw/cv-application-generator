@@ -1,16 +1,19 @@
-# React + Vite
+# CV Application Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+1. Input general information, educational experience, and practical experience.
+2. Click submit on all sections.
+3. Boom, a complete CV generated!
 
-Currently, two official plugins are available:
+If you want to edit the CV, simply press the _Edit_ buttons to the side of the CV after submission.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Closing thoughts
 
-## React Compiler
+This project folllowed a similar workflow to my recent [Homepage](https://github.com/m-redw/homepage) project.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Make the Trello
+2. Work on basics (HTML)
+3. Add functionality
+4. Style
+   It worked fine for this project, but I should also give credit to some drawings/mockups I made of the final design/funcions for making this process easier.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Used the Vite React template.
